@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Pedido Especial</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2em;
+      margin-bottom: 30px;
+      color: #333;
+    }
+
+    .botoes {
+      display: flex;
+      gap: 20px;
+    }
+
+    button {
+      padding: 15px 30px;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
+
+    #sim {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    #nao {
+      background-color: #f44336;
+      color: white;
+      position: relative;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Diretora, me dá uma folguinha segunda? 😇</h1>
+
+  <div class="botoes">
+    <button id="sim" onclick="concederFolga()">Sim 😍</button>
+    <button id="nao" onmouseover="fugir(this)">Não 🙄</button>
+  </div>
+
+  <script>
+    function fugir(botao) {
+      const maxX = window.innerWidth - botao.offsetWidth;
+      const maxY = window.innerHeight - botao.offsetHeight;
+      const aleatorioX = Math.floor(Math.random() * maxX);
+      const aleatorioY = Math.floor(Math.random() * maxY);
+
+      botao.style.position = "absolute";
+      botao.style.left = aleatorioX + "px";
+      botao.style.top = aleatorioY + "px";
+    }
+
+    function concederFolga() {
+      window.location.href = "https://youtu.be/HKHQax_aQw8?si=tAhn9om2Uak2XdAK"; // Troque por qualquer link que quiser
+    }
+  </script>
+
+</body>
+</html>
